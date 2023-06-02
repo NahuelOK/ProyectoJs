@@ -1,0 +1,49 @@
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+}
+
+.tabla{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    justify-items: center;
+}
+#aprobados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+}
+#desaprobados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+}
+
+.titulo-a{
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+.titulo-d{
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+p{
+    font-size: 18px;
+    font-family: arial;
+    border-bottom: solid black 2px;
+}
+#botoncito{
+    height: 44px;
+    width: 192px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+    border-radius: 25px;
+}
