@@ -1,13 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 main{
     display: flex;
     justify-content: center;
-    margin-top: 12%;
+    margin-top: 8%;
+    flex-direction: column;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .tabla{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 50%;
+    width: 60%;
     justify-items: center;
 }
 #aprobados{
@@ -46,4 +54,26 @@ p{
     font-size: 20px;
     font-family: arial;
     border-radius: 25px;
+    margin-top: 18px;
+    margin-bottom: 36px;
+}
+.formulario{
+    display: grid;
+    gap: 10px;
+}
+.texto{
+    height: 28px;
+    font-size: 15px;
+}
+h1{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.c-tabla{
+    display: flex;
+    justify-content: center;
 }

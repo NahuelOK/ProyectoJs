@@ -9,15 +9,27 @@
     </head>
     <body>
         <main>
-            <div>
-                <input id="botoncito" type="button" value="Cargar Notas">
-            </div>
-            <div class="tabla">
-                <h2 id="titulo-a">Aprobados</h2>
-                <h2 id="titulo-d">Desaprobados</h2>
-                <div id="aprobados">
+            <h1>Rellene el formulario para subir notas</h1>
+            <form action="enviar" class="formulario" id="formu">
+                <input id ="nombre-form" class="texto" type="text" placeholder="Ingrese Nombre de alumno">
+                <input id ="apellido-form" class="texto" type="text" placeholder="Ingrese Apellido de alumno">
+                <input id ="note1" class="texto" type="text" placeholder="Ingrese la 1 nota">
+                <input id ="note2" class="texto" type="text" placeholder="Ingrese la 2 nota">
+                <input id ="note3" class="texto" type="text" placeholder="Ingrese la 3 nota">
+                <input id ="note4" class="texto" type="text" placeholder="Ingrese la 4 nota">
+                <input id ="note5" class="texto"type="text" placeholder="Ingrese la 5 nota">
+                <div>
+                    <input id="botoncito" type="submit" value="Cargar Notas" onclick="enviarFormulario(event)">
                 </div>
-                <div id="desaprobados">
+            </form>
+            <div class="c-tabla">
+                <div class="tabla">
+                    <h2 id="titulo-a">Aprobados</h2>
+                    <h2 id="titulo-d">Desaprobados</h2>
+                    <div id="aprobados">
+                    </div>
+                    <div id="desaprobados">
+                    </div>
                 </div>
             </div>
         </main>
