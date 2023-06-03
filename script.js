@@ -146,17 +146,16 @@ let notaForm1 = 0;
 let notaForm2 = 0;
 let notaForm3 = 0;
 let notaForm4 = 0;
-let notaForm5 = 0; 
-let estudiantesA = []
-let estudiantesD = []
+let notaForm5 = 0;
+let estudiantesA = [];
+let estudiantesD = [];
 let estudiante0;
 let aprobados = document.getElementById("aprobados");
 let desaprobados = document.getElementById("desaprobados");
 let suma = 0;
 
 function enviarFormulario(event) {
-  event.preventDefault(); 
-
+  event.preventDefault();
   nombreForm = document.getElementById("nombre-form").value;
   apellidoForm = document.getElementById("apellido-form").value;
   notaForm1 = parseFloat(document.getElementById("note1").value);
@@ -165,6 +164,15 @@ function enviarFormulario(event) {
   notaForm4 = parseFloat(document.getElementById("note4").value);
   notaForm5 = parseFloat(document.getElementById("note5").value);
 
+  if(isNaN(notaForm1) || notaForm1 < 0 || notaForm1 > 10 ||
+    isNaN(notaForm2) || notaForm2 < 0 || notaForm2 > 10 ||
+    isNaN(notaForm3) || notaForm3 < 0 || notaForm3 > 10 ||
+    isNaN(notaForm4) || notaForm4 < 0 || notaForm4 > 10 ||
+    isNaN(notaForm5) || notaForm5 < 0 || notaForm5 > 10){
+      alert("Por favor, ingrese notas válidas entre 0 y 10.");
+      return;
+  }
+  
   document.getElementById("formu").reset();
   calculoPromedios();
 }
@@ -183,16 +191,16 @@ function calculoPromedios() {
   let promedio = suma / 5;
   estudiante0 = new Estudiante(nombreForm, apellidoForm, "5to-B");
 
-  alert("Alumno: " + estudiante0.nombre + "\n" + "Las notas de " + estudiante0.nombre + " son: " + "\n" + notas + "Su promedio es de: " + promedio);
-
-  if (promedio >= 6) {
+  if ((promedio >= 6) &&(nombreForm != "")&&(apellidoForm != "")) {
     alert("El alumno " + estudiante0.nombre + " aprobó la materia!");
     estudiantesA.push(estudiante0.nombre + " " + estudiante0.apellido + " " + "(" + promedio + ")");
-  } else if (promedio < 6) {
+    alert("Alumno: " + estudiante0.nombre + "\n" + "Las notas de " + estudiante0.nombre + " son: " + "\n" + notas + "Su promedio es de: " + promedio);
+  } else if ((promedio < 6)&&(nombreForm != "")&&(apellidoForm != "")) {
     alert("El alumno " + estudiante0.nombre + " tiene que recursar la materia!");
     estudiantesD.push(estudiante0.nombre + " " + estudiante0.apellido + " " + "(" + promedio + ")");
+    alert("Alumno: " + estudiante0.nombre + "\n" + "Las notas de " + estudiante0.nombre + " son: " + "\n" + notas + "Su promedio es de: " + promedio);
   } else {
-    alert("Ingrese valores válidos");
+    alert("Porfavor Rellene Correctamente Los Datos");
   }
 
   aprobados.innerHTML = "";
