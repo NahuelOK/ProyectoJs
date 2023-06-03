@@ -1,3 +1,4 @@
+//v1.0
 /* let boton = document.getElementById("botoncito");
 boton.addEventListener("click", megaFuntion);
 
@@ -66,6 +67,8 @@ function megaFuntion() {
     }
 } */
 
+
+//v2.0
 /* let nombreForm = "";
 let apellidoForm = "";
 let notaForm1 = 0;
@@ -136,6 +139,7 @@ function calculoPromedios(){
   }
 } */
 
+//v3.0
 let nombreForm = "";
 let apellidoForm = "";
 let notaForm1 = 0;
