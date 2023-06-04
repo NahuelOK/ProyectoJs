@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+section{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid black 1px;
+    width: 30%;
+    align-items: center;
+}
+.div-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-comprar{
+    height: 38px;
+    width: 134px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 0%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.vidriera{
+    display: flex;
+    justify-content: center;
+}

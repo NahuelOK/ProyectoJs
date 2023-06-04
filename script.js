@@ -218,9 +218,9 @@ function calculoPromedios() {
 } */
 
 
-//proyecto-final
+//proyecto-final v1.0
 
-let productosCargados = [];
+/* let productosCargados = [];
 let carrito = [];
 let precios = [];
 let totalCarro = [];
@@ -230,10 +230,10 @@ let cargar;
 let cargarCarro;
 let nombrep;
 let preciop;
-let idp = 0;
-let carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
+let idp = 0; */
+//let carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
 
-class producto{
+/* class producto{
   constructor(id, nombre, precio){
     this.id=id;
     this.nombre=nombre;
@@ -284,8 +284,50 @@ function cargarAlCarro(){
   }
 
   alert("Productos sumados al carro:"+carrito+"\n"+"\n"+"Total a pagar: "+total)
+} */
+
+/* if(carga !== "ESC"){
+  cargarAlCarro()
+} */
+// v2.0
+let productosCargados = [];
+let carrito = [];
+let precios = [];
+let totalCarro = 0;
+let total = 0;
+let idp = 0;
+let boton0 = document.getElementById("boton0");
+let parrafo = document.createElement("p");
+
+class Producto {
+  constructor(id, nombre, precio) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
 }
 
-if(carga !== "ESC"){
-  cargarAlCarro()
+let producto0 = new Producto(idp, "Coca-Cola", 800);
+productosCargados.push(producto0.nombre);
+precios.push(producto0.precio);
+parrafo.textContent = producto0.nombre + "\n" + producto0.precio + "$";
+parrafo.style.display = "flex";
+parrafo.style.justifyContent = "center";
+document.getElementById("info").appendChild(parrafo);
+
+function cargarAlCarro() {
+  carrito.push(producto0);
+  totalCarro += producto0.precio;
+  total += producto0.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
 }
+
+boton0.addEventListener("click", cargarAlCarro);
+
+
+
