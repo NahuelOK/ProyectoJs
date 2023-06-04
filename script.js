@@ -66,8 +66,6 @@ function megaFuntion() {
       aprobados.appendChild(parrafosA);
     }
 } */
-
-
 //v2.0
 /* let nombreForm = "";
 let apellidoForm = "";
@@ -140,7 +138,7 @@ function calculoPromedios(){
 } */
 
 //v3.0
-let nombreForm = "";
+/* let nombreForm = "";
 let apellidoForm = "";
 let notaForm1 = 0;
 let notaForm2 = 0;
@@ -217,4 +215,77 @@ function calculoPromedios() {
     parrafoA.textContent = estudiantesA[i];
     aprobados.appendChild(parrafoA);
   }
+} */
+
+
+//proyecto-final
+
+let productosCargados = [];
+let carrito = [];
+let precios = [];
+let totalCarro = [];
+let total=0;
+let producto0;
+let cargar;
+let cargarCarro;
+let nombrep;
+let preciop;
+let idp = 0;
+let carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
+
+class producto{
+  constructor(id, nombre, precio){
+    this.id=id;
+    this.nombre=nombre;
+    this.precio=precio;
+  }
+}
+function agregarId(){
+  for(i=0; i<= productosCargados.length; i++){
+    idp = (i + 1)
+  }
+}
+
+function explotar(){
+  
+}
+
+function subirProducto(){
+  while(carga !== "ESC"){
+    nombrep = prompt("Ingrese el nombre del producto")
+    preciop = parseFloat(prompt("Ingrese el precio del producto"))
+    agregarId()
+    producto0 = new producto (idp,nombrep,preciop)
+  
+    if (nombrep ===""||preciop ===""){
+      alert("Error al sumar producto! Porfavor vuelva a ingresar los datos")
+      carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
+    }
+    else{
+      productosCargados.push("\n"+"("+producto0.id+")"+" "+producto0.nombre +" "+ producto0.precio)
+      precios.push(producto0.precio)
+      carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
+    }
+  }
+}
+
+function cargarAlCarro(){
+  subirProducto()
+  while(cargarCarro != "OK"){
+    cargarCarro = prompt("Para comprar, ingresar el numero del producto"+"\n"+"Cuando termine ingresar (OK)"+productosCargados)
+    carrito.push(productosCargados[cargarCarro-1])
+    totalCarro.push(precios[cargarCarro-1])
+  }
+  carrito.pop()
+  totalCarro.pop()
+
+  for (i =0; i<totalCarro.length; i++){
+    total += totalCarro[i];
+  }
+
+  alert("Productos sumados al carro:"+carrito+"\n"+"\n"+"Total a pagar: "+total)
+}
+
+if(carga !== "ESC"){
+  cargarAlCarro()
 }
