@@ -391,99 +391,126 @@ function cargarAlCarro0() {
   totalCarro += producto0.precio;
   total += producto0.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro0() {
   carrito.push(producto0);
   totalCarro += producto0.precio;
   total += producto0.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro1() {
   carrito.push(producto1);
   totalCarro += producto1.precio;
   total += producto1.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro2() {
   carrito.push(producto2);
   totalCarro += producto2.precio;
   total += producto2.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro3() {
   carrito.push(producto3);
   totalCarro += producto3.precio;
   total += producto3.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro4() {
   carrito.push(producto4);
   totalCarro += producto4.precio;
   total += producto4.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro5() {
   carrito.push(producto5);
   totalCarro += producto5.precio;
   total += producto5.precio;
-  
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro6() {
   carrito.push(producto6);
   totalCarro += producto6.precio;
   total += producto6.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+ Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 function cargarAlCarro7() {
-  carrito.push(producto7);
-  totalCarro += producto7.precio;
-  total += producto7.precio;
+  carrito.push(producto0);
+  totalCarro += producto0.precio;
+  total += producto0.precio;
   
-  alert(
-    "Productos sumados al carro: " + carrito.length + "\n" +
-    "\n" +
-    "Total a pagar: " + totalCarro + "$"
-  );
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3500, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    backgroundColor: "black",
+    
+  }).showToast();
 }
 
 
@@ -494,7 +521,7 @@ boton3.addEventListener("click", cargarAlCarro3);
 boton4.addEventListener("click", cargarAlCarro4);
 boton5.addEventListener("click", cargarAlCarro5);
 boton6.addEventListener("click", cargarAlCarro6);
-boton7.addEventListener("click", cargarAlCarro7,crearnoti);
+boton7.addEventListener("click", cargarAlCarro7);
 
 
 
