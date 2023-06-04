@@ -396,7 +396,9 @@ function cargarAlCarro0() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -410,7 +412,9 @@ function cargarAlCarro0() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -424,7 +428,9 @@ function cargarAlCarro1() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -438,7 +444,9 @@ function cargarAlCarro2() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -452,7 +460,9 @@ function cargarAlCarro3() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -466,7 +476,9 @@ function cargarAlCarro4() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -480,7 +492,9 @@ function cargarAlCarro5() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -494,7 +508,9 @@ function cargarAlCarro6() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
@@ -508,7 +524,9 @@ function cargarAlCarro7() {
     class:"info",
     duration: 3500, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
-    backgroundColor: "black",
+    style:{
+      background:"black"
+    }
     
   }).showToast();
 }
