@@ -297,7 +297,22 @@ let totalCarro = 0;
 let total = 0;
 let idp = 0;
 let boton0 = document.getElementById("boton0");
-let parrafo = document.createElement("p");
+let boton1 = document.getElementById("boton1");
+let boton2 = document.getElementById("boton2");
+let boton3 = document.getElementById("boton3");
+let boton4 = document.getElementById("boton4");
+let boton5 = document.getElementById("boton5");
+let boton6 = document.getElementById("boton6");
+let boton7 = document.getElementById("boton7");
+let parrafo1 = document.createElement("p");
+let parrafo2 = document.createElement("p");
+let parrafo3 = document.createElement("p");
+let parrafo4 = document.createElement("p");
+let parrafo5 = document.createElement("p");
+let parrafo6 = document.createElement("p");
+let parrafo7 = document.createElement("p");
+let parrafo8 = document.createElement("p");
+
 
 class Producto {
   constructor(id, nombre, precio) {
@@ -307,15 +322,71 @@ class Producto {
   }
 }
 
-let producto0 = new Producto(idp, "Coca-Cola", 800);
+let producto0 = new Producto(idp, "Coca-Cola |", 800);
 productosCargados.push(producto0.nombre);
 precios.push(producto0.precio);
-parrafo.textContent = producto0.nombre + "\n" + producto0.precio + "$";
-parrafo.style.display = "flex";
-parrafo.style.justifyContent = "center";
-document.getElementById("info").appendChild(parrafo);
+parrafo1.textContent = producto0.nombre + "\n" + producto0.precio + "$";
+parrafo1.style.display = "flex";
+parrafo1.style.justifyContent = "center";
+document.getElementById("info1").appendChild(parrafo1);
 
-function cargarAlCarro() {
+let producto1 = new Producto(idp, "Fernet Branca |", 1200);
+productosCargados.push(producto1.nombre);
+precios.push(producto1.precio);
+parrafo2.textContent = producto1.nombre + "\n" + producto1.precio + "$";
+parrafo2.style.display = "flex";
+parrafo2.style.justifyContent = "center";
+document.getElementById("info2").appendChild(parrafo2);
+
+let producto2 = new Producto(idp, "Jackdaniels |", 2400);
+productosCargados.push(producto2.nombre);
+precios.push(producto2.precio);
+parrafo3.textContent = producto2.nombre + "\n" + producto2.precio + "$";
+parrafo3.style.display = "flex";
+parrafo3.style.justifyContent = "center";
+document.getElementById("info3").appendChild(parrafo3);
+
+let producto3 = new Producto(idp, "Cerveza Corona |", 850);
+productosCargados.push(producto3.nombre);
+precios.push(producto3.precio);
+parrafo4.textContent = producto3.nombre + "\n" + producto3.precio + "$";
+parrafo4.style.display = "flex";
+parrafo4.style.justifyContent = "center";
+document.getElementById("info4").appendChild(parrafo4);
+
+let producto4 = new Producto(idp, "Bacardi 151 |", 1600);
+productosCargados.push(producto4.nombre);
+precios.push(producto4.precio);
+parrafo5.textContent = producto4.nombre + "\n" + producto4.precio + "$";
+parrafo5.style.display = "flex";
+parrafo5.style.justifyContent = "center";
+document.getElementById("info5").appendChild(parrafo5);
+
+let producto5 = new Producto(idp, "Monkey 4 |", 1800);
+productosCargados.push(producto5.nombre);
+precios.push(producto5.precio);
+parrafo6.textContent = producto5.nombre + "\n" + producto5.precio + "$";
+parrafo6.style.display = "flex";
+parrafo6.style.justifyContent = "center";
+document.getElementById("info6").appendChild(parrafo6);
+
+let producto6 = new Producto(idp, "Absolut |", 5000);
+productosCargados.push(producto6.nombre);
+precios.push(producto6.precio);
+parrafo7.textContent = producto6.nombre + "\n" + producto6.precio + "$";
+parrafo7.style.display = "flex";
+parrafo7.style.justifyContent = "center";
+document.getElementById("info7").appendChild(parrafo7);
+
+let producto7 = new Producto(idp, "RedBull |", 400);
+productosCargados.push(producto7.nombre);
+precios.push(producto7.precio);
+parrafo8.textContent = producto7.nombre + "\n" + producto7.precio + "$";
+parrafo8.style.display = "flex";
+parrafo8.style.justifyContent = "center";
+document.getElementById("info8").appendChild(parrafo8);
+
+function cargarAlCarro0() {
   carrito.push(producto0);
   totalCarro += producto0.precio;
   total += producto0.precio;
@@ -326,8 +397,104 @@ function cargarAlCarro() {
     "Total a pagar: " + totalCarro + "$"
   );
 }
+function cargarAlCarro0() {
+  carrito.push(producto0);
+  totalCarro += producto0.precio;
+  total += producto0.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro1() {
+  carrito.push(producto1);
+  totalCarro += producto1.precio;
+  total += producto1.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro2() {
+  carrito.push(producto2);
+  totalCarro += producto2.precio;
+  total += producto2.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro3() {
+  carrito.push(producto3);
+  totalCarro += producto3.precio;
+  total += producto3.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro4() {
+  carrito.push(producto4);
+  totalCarro += producto4.precio;
+  total += producto4.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro5() {
+  carrito.push(producto5);
+  totalCarro += producto5.precio;
+  total += producto5.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro6() {
+  carrito.push(producto6);
+  totalCarro += producto6.precio;
+  total += producto6.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
+function cargarAlCarro7() {
+  carrito.push(producto7);
+  totalCarro += producto7.precio;
+  total += producto7.precio;
+  
+  alert(
+    "Productos sumados al carro: " + carrito.length + "\n" +
+    "\n" +
+    "Total a pagar: " + totalCarro + "$"
+  );
+}
 
-boton0.addEventListener("click", cargarAlCarro);
+
+boton0.addEventListener("click", cargarAlCarro0);
+boton1.addEventListener("click", cargarAlCarro1);
+boton2.addEventListener("click", cargarAlCarro2);
+boton3.addEventListener("click", cargarAlCarro3);
+boton4.addEventListener("click", cargarAlCarro4);
+boton5.addEventListener("click", cargarAlCarro5);
+boton6.addEventListener("click", cargarAlCarro6);
+boton7.addEventListener("click", cargarAlCarro7,crearnoti);
 
 
 
