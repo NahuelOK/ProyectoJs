@@ -296,6 +296,7 @@ let precios = [];
 let totalCarro = 0;
 let total = 0;
 let idp = 0;
+let enlaseCarro = document.getElementById("enlase-carro")
 let boton0 = document.getElementById("boton0");
 let boton1 = document.getElementById("boton1");
 let boton2 = document.getElementById("boton2");
@@ -394,7 +395,7 @@ function cargarAlCarro0() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -410,7 +411,7 @@ function cargarAlCarro0() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -426,7 +427,7 @@ function cargarAlCarro1() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -442,7 +443,7 @@ function cargarAlCarro2() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -458,7 +459,7 @@ function cargarAlCarro3() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -474,7 +475,7 @@ function cargarAlCarro4() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -490,7 +491,7 @@ function cargarAlCarro5() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -506,7 +507,7 @@ function cargarAlCarro6() {
  Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -522,7 +523,7 @@ function cargarAlCarro7() {
   Toastify({
     text: "Producto agregado al carrito",
     class:"info",
-    duration: 3500, // Duración en milisegundos
+    duration: 3000, // Duración en milisegundos
     gravity: "top", // Posición del toast (bottom, top, center)
     style:{
       background:"black"
@@ -530,7 +531,6 @@ function cargarAlCarro7() {
     
   }).showToast();
 }
-
 
 boton0.addEventListener("click", cargarAlCarro0);
 boton1.addEventListener("click", cargarAlCarro1);
@@ -540,6 +540,16 @@ boton4.addEventListener("click", cargarAlCarro4);
 boton5.addEventListener("click", cargarAlCarro5);
 boton6.addEventListener("click", cargarAlCarro6);
 boton7.addEventListener("click", cargarAlCarro7);
+enlaseCarro.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (carrito.length == 0) {
+    window.location.href="pages/carrito-vacio.html"
+  } else {
+    window.location.href="pages/carrito.html"
+  }
+});
+
+
 
 
 
