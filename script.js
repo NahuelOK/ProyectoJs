@@ -1,310 +1,32 @@
-//v1.0
-/* let boton = document.getElementById("botoncito");
-boton.addEventListener("click", megaFuntion);
-
-function megaFuntion() {
-    class estudiante{
-        constructor(nombre, apellido, curso){
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.curso = curso;
-        }
-    }
-    
-    let estudiantesA =[]
-    let estudiantesD =[]
-    let estudiante0;
-    let apagar;
-    
-    function calculoPromedios(){
-        let nota;
-        let notas=""; 
-        let suma=0 
-        estudiante0 = new estudiante (prompt("Ingrese Nombre"),prompt("Ingrese Apellido"),"5to-B")
-        for (let i=1; i<=5; i++){
-            nota = parseInt(prompt("Ingrese nota")) 
-            notas += nota + "\n"
-            suma += nota 
-        }
-        let promedio = suma/5
-        alert("Alumno: "+estudiante0.nombre +"\n"+"Las notas de "+estudiante0.nombre +" son: "+"\n"+notas+"Su promedio es de: "+promedio)
-    
-        if (promedio >= 6){
-            alert("El alumno "+estudiante0.nombre+" aprobó la materia!")
-            estudiantesA.push(estudiante0.nombre +" "+ estudiante0.apellido +" "+"("+promedio+")")
-        }
-        else if (promedio < 6){
-            alert("El alumno "+estudiante0.nombre+" tiene que recursar la materia!")
-            estudiantesD.push(estudiante0.nombre +" "+ estudiante0.apellido +" "+"("+promedio+")")
-        }
-        else {
-            alert("Ingrese valores validos")
-        }
-        apagar = prompt("Para apagar el sistema Ingresar (ESC)" + "\n" + "De lo contrario pulse enter")
-        
-        estudiantesA.sort();
-        estudiantesD.sort();
-    }
-    
-    while(apagar != "ESC"){
-        calculoPromedios()
-    }
-    
-    let aprobados = document.getElementById("aprobados");
-    let desaprobados = document.getElementById("desaprobados");
-    let parrafosA;
-    let parrafosD;
-    
-    for (let i = 0; i < estudiantesD.length; i++) {
-        parrafosD = document.createElement("p");
-        parrafosD.textContent = estudiantesD[i];
-        desaprobados.appendChild(parrafosD);
-      }
-    for (let i = 0; i < estudiantesA.length; i++) {
-      parrafosA = document.createElement("p");
-      parrafosA.textContent = estudiantesA[i];
-      aprobados.appendChild(parrafosA);
-    }
-} */
-//v2.0
-/* let nombreForm = "";
-let apellidoForm = "";
-let notaForm1 = 0;
-let notaForm2 = 0;
-let notaForm3 = 0;
-let notaForm4 = 0;
-let notaForm5 = 0; 
-let estudiantesA =[]
-let estudiantesD =[]
-let estudiante0;
-let aprobados = document.getElementById("aprobados");
-let desaprobados = document.getElementById("desaprobados");
-let parrafosA;
-let parrafosD;
-let suma=0;
-
-function enviarFormulario(event) {
-    event.preventDefault(); 
-  
-     nombreForm = document.getElementById("nombre-form").value
-     apellidoForm = document.getElementById("apellido-form").value
-     notaForm1 = parseFloat(document.getElementById("note1").value) 
-     notaForm2 = parseFloat(document.getElementById("note2").value) 
-     notaForm3 = parseFloat(document.getElementById("note3").value) 
-     notaForm4 = parseFloat(document.getElementById("note4").value) 
-     notaForm5 = parseFloat(document.getElementById("note5").value) 
-  
-    document.getElementById("formu").reset();
-    calculoPromedios()
-}
-class estudiante{
-    constructor(nombre, apellido, curso){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.curso = curso;
-    }
-}
-function calculoPromedios(){
-    let notas = notaForm1 + "\n" +notaForm2 + "\n" + notaForm3 + "\n" + notaForm4 + "\n" + notaForm5 + "\n"
-    suma= notaForm1 + notaForm2+ notaForm3+ notaForm4+ notaForm5
-    let promedio = suma/5
-    estudiante0 = new estudiante (nombreForm,apellidoForm,"5to-B")
-
-    alert("Alumno: "+estudiante0.nombre +"\n"+"Las notas de "+estudiante0.nombre +" son: "+"\n"+notas+"Su promedio es de: "+promedio)
-
-    if (promedio >= 6){
-        alert("El alumno "+estudiante0.nombre+" aprobó la materia!")
-        estudiantesA.push(estudiante0.nombre +" "+ estudiante0.apellido +" "+"("+promedio+")")
-    }
-    else if (promedio < 6){
-        alert("El alumno "+estudiante0.nombre+" tiene que recursar la materia!")
-        estudiantesD.push(estudiante0.nombre +" "+ estudiante0.apellido +" "+"("+promedio+")")
-    }
-    else {
-        alert("Ingrese valores validos")
-    }
-    // Agregar los nuevos elementos al final de los contenedores
-  if (estudiantesD.length > 0) {
-    let parrafoD = document.createElement("p");
-    parrafoD.textContent = estudiantesD[estudiantesD.length - 1];
-    desaprobados.appendChild(parrafoD);
-  }
-
-  if (estudiantesA.length > 0) {
-    let parrafoA = document.createElement("p");
-    parrafoA.textContent = estudiantesA[estudiantesA.length - 1];
-    aprobados.appendChild(parrafoA);
-  }
-} */
-
-//v3.0
-/* let nombreForm = "";
-let apellidoForm = "";
-let notaForm1 = 0;
-let notaForm2 = 0;
-let notaForm3 = 0;
-let notaForm4 = 0;
-let notaForm5 = 0;
-let estudiantesA = [];
-let estudiantesD = [];
-let estudiante0;
-let aprobados = document.getElementById("aprobados");
-let desaprobados = document.getElementById("desaprobados");
-let suma = 0;
-
-function enviarFormulario(event) {
-  event.preventDefault();
-  nombreForm = document.getElementById("nombre-form").value;
-  apellidoForm = document.getElementById("apellido-form").value;
-  notaForm1 = parseFloat(document.getElementById("note1").value);
-  notaForm2 = parseFloat(document.getElementById("note2").value);
-  notaForm3 = parseFloat(document.getElementById("note3").value);
-  notaForm4 = parseFloat(document.getElementById("note4").value);
-  notaForm5 = parseFloat(document.getElementById("note5").value);
-
-  if(isNaN(notaForm1) || notaForm1 < 0 || notaForm1 > 10 ||
-    isNaN(notaForm2) || notaForm2 < 0 || notaForm2 > 10 ||
-    isNaN(notaForm3) || notaForm3 < 0 || notaForm3 > 10 ||
-    isNaN(notaForm4) || notaForm4 < 0 || notaForm4 > 10 ||
-    isNaN(notaForm5) || notaForm5 < 0 || notaForm5 > 10){
-      alert("Por favor, ingrese notas válidas entre 0 y 10.");
-      return;
-  }
-  
-  document.getElementById("formu").reset();
-  calculoPromedios();
-}
-
-class Estudiante {
-  constructor(nombre, apellido, curso) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.curso = curso;
-  }
-}
-
-function calculoPromedios() {
-  let notas = notaForm1 + "\n" + notaForm2 + "\n" + notaForm3 + "\n" + notaForm4 + "\n" + notaForm5 + "\n";
-  suma = notaForm1 + notaForm2 + notaForm3 + notaForm4 + notaForm5;
-  let promedio = suma / 5;
-  estudiante0 = new Estudiante(nombreForm, apellidoForm, "5to-B");
-
-  if ((promedio >= 6) &&(nombreForm != "")&&(apellidoForm != "")) {
-    alert("El alumno " + estudiante0.nombre + " aprobó la materia!");
-    estudiantesA.push(estudiante0.nombre + " " + estudiante0.apellido + " " + "(" + promedio + ")");
-    alert("Alumno: " + estudiante0.nombre + "\n" + "Las notas de " + estudiante0.nombre + " son: " + "\n" + notas + "Su promedio es de: " + promedio);
-  } else if ((promedio < 6)&&(nombreForm != "")&&(apellidoForm != "")) {
-    alert("El alumno " + estudiante0.nombre + " tiene que recursar la materia!");
-    estudiantesD.push(estudiante0.nombre + " " + estudiante0.apellido + " " + "(" + promedio + ")");
-    alert("Alumno: " + estudiante0.nombre + "\n" + "Las notas de " + estudiante0.nombre + " son: " + "\n" + notas + "Su promedio es de: " + promedio);
-  } else {
-    alert("Porfavor Rellene Correctamente Los Datos");
-  }
-
-  aprobados.innerHTML = "";
-  desaprobados.innerHTML = "";
-
-  for (let i = 0; i < estudiantesD.length; i++) {
-    let parrafoD = document.createElement("p");
-    parrafoD.textContent = estudiantesD[i];
-    desaprobados.appendChild(parrafoD);
-  }
-
-  for (let i = 0; i < estudiantesA.length; i++) {
-    let parrafoA = document.createElement("p");
-    parrafoA.textContent = estudiantesA[i];
-    aprobados.appendChild(parrafoA);
-  }
-} */
-
-
-//proyecto-final v1.0
-
-/* let productosCargados = [];
-let carrito = [];
-let precios = [];
-let totalCarro = [];
-let total=0;
-let producto0;
-let cargar;
-let cargarCarro;
-let nombrep;
-let preciop;
-let idp = 0; */
-//let carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
-
-/* class producto{
-  constructor(id, nombre, precio){
-    this.id=id;
-    this.nombre=nombre;
-    this.precio=precio;
-  }
-}
-function agregarId(){
-  for(i=0; i<= productosCargados.length; i++){
-    idp = (i + 1)
-  }
-}
-
-function explotar(){
-  
-}
-
-function subirProducto(){
-  while(carga !== "ESC"){
-    nombrep = prompt("Ingrese el nombre del producto")
-    preciop = parseFloat(prompt("Ingrese el precio del producto"))
-    agregarId()
-    producto0 = new producto (idp,nombrep,preciop)
-  
-    if (nombrep ===""||preciop ===""){
-      alert("Error al sumar producto! Porfavor vuelva a ingresar los datos")
-      carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
-    }
-    else{
-      productosCargados.push("\n"+"("+producto0.id+")"+" "+producto0.nombre +" "+ producto0.precio)
-      precios.push(producto0.precio)
-      carga = prompt("Para cargar Productos pulse enter" + "\n"+ "Caso contrario escriba (ESC)")
-    }
-  }
-}
-
-function cargarAlCarro(){
-  subirProducto()
-  while(cargarCarro != "OK"){
-    cargarCarro = prompt("Para comprar, ingresar el numero del producto"+"\n"+"Cuando termine ingresar (OK)"+productosCargados)
-    carrito.push(productosCargados[cargarCarro-1])
-    totalCarro.push(precios[cargarCarro-1])
-  }
-  carrito.pop()
-  totalCarro.pop()
-
-  for (i =0; i<totalCarro.length; i++){
-    total += totalCarro[i];
-  }
-
-  alert("Productos sumados al carro:"+carrito+"\n"+"\n"+"Total a pagar: "+total)
-} */
-
-/* if(carga !== "ESC"){
-  cargarAlCarro()
-} */
-// v2.0
 let productosCargados = [];
-let carrito = [];
 let precios = [];
 let totalCarro = 0;
 let total = 0;
-let idp = 0;
+let carrito = [];
+let carrito2 = [];
+let carrito3 = [];
+let carrito4 = [];
+let carrito5 = [];
+let carrito6 = [];
+let carrito7 = [];
+let carrito8 = [];
+let valorExistente = localStorage.getItem('clave');
+let valorExistente2 = localStorage.getItem('clave2');
+let valorExistente3 = localStorage.getItem('clave3');
+let valorExistente4 = localStorage.getItem('clave4');
+let valorExistente5 = localStorage.getItem('clave5');
+let valorExistente6 = localStorage.getItem('clave6');
+let valorExistente7 = localStorage.getItem('clave7');
+let valorExistente8 = localStorage.getItem('clave8');
 let enlaseCarro = document.getElementById("enlase-carro")
-let boton0 = document.getElementById("boton0");
-let boton1 = document.getElementById("boton1");
-let boton2 = document.getElementById("boton2");
-let boton3 = document.getElementById("boton3");
-let boton4 = document.getElementById("boton4");
-let boton5 = document.getElementById("boton5");
-let boton6 = document.getElementById("boton6");
-let boton7 = document.getElementById("boton7");
+let boton0 = document.getElementById("boton");
+let boton1 = document.getElementById("boton2");
+let boton2 = document.getElementById("boton3");
+let boton3 = document.getElementById("boton4");
+let boton4 = document.getElementById("boton5");
+let boton5 = document.getElementById("boton6");
+let boton6 = document.getElementById("boton7");
+let boton7 = document.getElementById("boton8");
 let parrafo1 = document.createElement("p");
 let parrafo2 = document.createElement("p");
 let parrafo3 = document.createElement("p");
@@ -313,7 +35,7 @@ let parrafo5 = document.createElement("p");
 let parrafo6 = document.createElement("p");
 let parrafo7 = document.createElement("p");
 let parrafo8 = document.createElement("p");
-
+let sumatotal = parseFloat(localStorage.getItem("total")) || 0;
 
 class Producto {
   constructor(id, nombre, precio) {
@@ -323,7 +45,7 @@ class Producto {
   }
 }
 
-let producto0 = new Producto(idp, "Coca-Cola", 800);
+let producto0 = new Producto(1, "Coca-Cola", 800);
 productosCargados.push(producto0.nombre);
 precios.push(producto0.precio);
 parrafo1.textContent = producto0.nombre + " | " + producto0.precio + "$";
@@ -331,7 +53,7 @@ parrafo1.style.display = "flex";
 parrafo1.style.justifyContent = "center";
 document.getElementById("info1").appendChild(parrafo1);
 
-let producto1 = new Producto(idp, "Fernet Branca", 1200);
+let producto1 = new Producto(2, "Fernet Branca", 1200);
 productosCargados.push(producto1.nombre);
 precios.push(producto1.precio);
 parrafo2.textContent = producto1.nombre + " | " + producto1.precio + "$";
@@ -339,7 +61,7 @@ parrafo2.style.display = "flex";
 parrafo2.style.justifyContent = "center";
 document.getElementById("info2").appendChild(parrafo2);
 
-let producto2 = new Producto(idp, "Jackdaniels", 2400);
+let producto2 = new Producto(3, "Jackdaniels", 2400);
 productosCargados.push(producto2.nombre);
 precios.push(producto2.precio);
 parrafo3.textContent = producto2.nombre + " | " + producto2.precio + "$";
@@ -347,7 +69,7 @@ parrafo3.style.display = "flex";
 parrafo3.style.justifyContent = "center";
 document.getElementById("info3").appendChild(parrafo3);
 
-let producto3 = new Producto(idp, "Cerveza Corona", 850);
+let producto3 = new Producto(4, "Cerveza Corona", 850);
 productosCargados.push(producto3.nombre);
 precios.push(producto3.precio);
 parrafo4.textContent = producto3.nombre + " | " + producto3.precio + "$";
@@ -355,7 +77,7 @@ parrafo4.style.display = "flex";
 parrafo4.style.justifyContent = "center";
 document.getElementById("info4").appendChild(parrafo4);
 
-let producto4 = new Producto(idp, "Bacardi 151", 1600);
+let producto4 = new Producto(5, "Bacardi 151", 1600);
 productosCargados.push(producto4.nombre);
 precios.push(producto4.precio);
 parrafo5.textContent = producto4.nombre + " | " + producto4.precio + "$";
@@ -363,7 +85,7 @@ parrafo5.style.display = "flex";
 parrafo5.style.justifyContent = "center";
 document.getElementById("info5").appendChild(parrafo5);
 
-let producto5 = new Producto(idp, "Monkey", 1800);
+let producto5 = new Producto(6, "Monkey", 1800);
 productosCargados.push(producto5.nombre);
 precios.push(producto5.precio);
 parrafo6.textContent = producto5.nombre + " | " + producto5.precio + "$";
@@ -371,7 +93,7 @@ parrafo6.style.display = "flex";
 parrafo6.style.justifyContent = "center";
 document.getElementById("info6").appendChild(parrafo6);
 
-let producto6 = new Producto(idp, "Absolut", 5000);
+let producto6 = new Producto(7, "Absolut", 5000);
 productosCargados.push(producto6.nombre);
 precios.push(producto6.precio);
 parrafo7.textContent = producto6.nombre + " | "+ producto6.precio + "$";
@@ -379,7 +101,7 @@ parrafo7.style.display = "flex";
 parrafo7.style.justifyContent = "center";
 document.getElementById("info7").appendChild(parrafo7);
 
-let producto7 = new Producto(idp, "RedBull", 400);
+let producto7 = new Producto(8, "RedBull", 400);
 productosCargados.push(producto7.nombre);
 precios.push(producto7.precio);
 parrafo8.textContent = producto7.nombre + " | " + producto7.precio + "$";
@@ -387,103 +109,93 @@ parrafo8.style.display = "flex";
 parrafo8.style.justifyContent = "center";
 document.getElementById("info8").appendChild(parrafo8);
 
-function guardarCarritoEnLocalStorage() {
-  let carritoJSON = JSON.stringify(carrito);
-  localStorage.setItem('carroGuardado', carritoJSON);
+function actualizarTotal(){
+  localStorage.setItem("total", sumatotal.toFixed(2));
 }
-function cargarCarritoDesdeLocalStorage() {
-  let carritoGuardadoJSON = localStorage.getItem('carroGuardado');
-  carroGuardado = JSON.parse(carritoGuardadoJSON);
+function mandarALocalStorage(){
+  if (valorExistente === null || valorExistente === undefined) {
+    localStorage.setItem('clave', JSON.stringify(carrito));
+  } else {
+    let valorParseado = JSON.parse(valorExistente);
+    let carritoCombinado = valorParseado.concat(carrito);
+    localStorage.setItem('clave', JSON.stringify(carritoCombinado));
+  }
+  actualizarTotal();
 }
-function cargarAlCarro0() {
+function mandarALocalStorage2(){
+  if (valorExistente2 === null || valorExistente2 === undefined) {
+    localStorage.setItem('clave2', JSON.stringify(carrito2));
+  } else {
+    let valorParseado2 = JSON.parse(valorExistente2);
+    let carritoCombinado2 = valorParseado2.concat(carrito2);
+    localStorage.setItem('clave2', JSON.stringify(carritoCombinado2));
+  }
+  actualizarTotal();
+}
+function mandarALocalStorage3(){
+  if (valorExistente3 === null || valorExistente3 === undefined) {
+    localStorage.setItem('clave3', JSON.stringify(carrito3));
+  } else {
+    let valorParseado3 = JSON.parse(valorExistente3);
+    let carritoCombinado3 = valorParseado3.concat(carrito3);
+    localStorage.setItem('clave3', JSON.stringify(carritoCombinado3));
+  }
+  actualizarTotal();
+}
+function mandarALocalStorage4(){
+  if (valorExistente4 === null || valorExistente4 === undefined) {
+    localStorage.setItem('clave4', JSON.stringify(carrito4));
+  } else {
+    let valorParseado4 = JSON.parse(valorExistente4);
+    let carritoCombinado4 = valorParseado4.concat(carrito4);
+    localStorage.setItem('clave4', JSON.stringify(carritoCombinado4));
+  }
+  actualizarTotal();
+}
+function mandarALocalStorage5(){
+  if (valorExistente5 === null || valorExistente5 === undefined) {
+    localStorage.setItem('clave5', JSON.stringify(carrito5));
+  } else {
+    let valorParseado5 = JSON.parse(valorExistente5);
+    let carritoCombinado5 = valorParseado5.concat(carrito5);
+    localStorage.setItem('clave5', JSON.stringify(carritoCombinado5));
+  }
+  actualizarTotal();
+}
+function mandarALocalStorage6(){
+  if (valorExistente6 === null || valorExistente6 === undefined) {
+    localStorage.setItem('clave6', JSON.stringify(carrito6));
+  } else {
+    let valorParseado6 = JSON.parse(valorExistente6);
+    let carritoCombinado6 = valorParseado6.concat(carrito6);
+    localStorage.setItem('clave6', JSON.stringify(carritoCombinado6));
+  }
+  actualizarTotal();
+}
+function mandarALocalStorage7(){
+  if (valorExistente7 === null || valorExistente7 === undefined) {
+    localStorage.setItem('clave7', JSON.stringify(carrito7));
+  } else {
+    let valorParseado7 = JSON.parse(valorExistente7);
+    let carritoCombinado7 = valorParseado7.concat(carrito7);
+    localStorage.setItem('clave7', JSON.stringify(carritoCombinado7));
+  }
+  actualizarTotal();
+}
+function mandarALocalStorage8(){
+  if (valorExistente8 === null || valorExistente8 === undefined) {
+    localStorage.setItem('clave8', JSON.stringify(carrito8));
+  } else {
+    let valorParseado8 = JSON.parse(valorExistente8);
+    let carritoCombinado8 = valorParseado8.concat(carrito8);
+    localStorage.setItem('clave8', JSON.stringify(carritoCombinado8));
+  }
+  actualizarTotal();
+}
+
+function cargarAlCarro(){
   carrito.push(producto0.nombre + " " + producto0.precio);
-  totalCarro += producto0.precio;
-  total += producto0.precio;
-  
-  Toastify({
-    text: "Producto agregado al carrito",
-    class:"info",
-    duration: 3000, // Duración en milisegundos
-    gravity: "top", // Posición del toast (bottom, top, center)
-    style:{
-      background:"black"
-    }
-  }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage();
-}
-function cargarAlCarro1() {
-  carrito.push(producto1.nombre + " " + producto1.precio);
-  totalCarro += producto1.precio;
-  total += producto1.precio;
-  
-  Toastify({
-    text: "Producto agregado al carrito",
-    class:"info",
-    duration: 3000, // Duración en milisegundos
-    gravity: "top", // Posición del toast (bottom, top, center)
-    style:{
-      background:"black"
-    }
-  }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
-}
-function cargarAlCarro2() {
-  carrito.push(producto2.nombre + " " + producto2.precio);
-  totalCarro += producto2.precio;
-  total += producto2.precio;
-  
-  Toastify({
-    text: "Producto agregado al carrito",
-    class:"info",
-    duration: 3000, // Duración en milisegundos
-    gravity: "top", // Posición del toast (bottom, top, center)
-    style:{
-      background:"black"
-    }
-  }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
-}
-function cargarAlCarro3() {
-  carrito.push(producto3.nombre + " " + producto3.precio);
-  totalCarro += producto3.precio;
-  total += producto3.precio;
-  
-  Toastify({
-    text: "Producto agregado al carrito",
-    class:"info",
-    duration: 3000, // Duración en milisegundos
-    gravity: "top", // Posición del toast (bottom, top, center)
-    style:{
-      background:"black"
-    }
-  }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
-}
-function cargarAlCarro4() {
-  carrito.push(producto4.nombre + " " + producto4.precio);
-  totalCarro += producto4.precio;
-  total += producto4.precio;
-  
-  Toastify({
-    text: "Producto agregado al carrito",
-    class:"info",
-    duration: 3000, // Duración en milisegundos
-    gravity: "top", // Posición del toast (bottom, top, center)
-    style:{
-      background:"black"
-    }
-  }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
-}
-function cargarAlCarro5() {
-  carrito.push(producto5.nombre + " " + producto5.precio);
-  totalCarro += producto5.precio;
-  total += producto5.precio;
+  sumatotal += producto0.precio;
 
   Toastify({
     text: "Producto agregado al carrito",
@@ -494,13 +206,86 @@ function cargarAlCarro5() {
       background:"black"
     }
   }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
+  mandarALocalStorage();
+}
+function cargarAlCarro2(){
+  carrito2.push(producto1.nombre + " " + producto1.precio);
+  sumatotal += producto1.precio;
+  
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3000, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    style:{
+      background:"black"
+    }
+  }).showToast();
+  mandarALocalStorage2();
+}
+function cargarAlCarro3() {
+  carrito3.push(producto2.nombre + " " + producto2.precio);
+  sumatotal += producto2.precio;
+  
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3000, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    style:{
+      background:"black"
+    }
+  }).showToast();
+  mandarALocalStorage3();
+}
+function cargarAlCarro4() {
+  carrito4.push(producto3.nombre + " " + producto3.precio);
+  sumatotal += producto3.precio;
+  
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3000, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    style:{
+      background:"black"
+    }
+  }).showToast();
+  mandarALocalStorage4();
+}
+function cargarAlCarro5() {
+  carrito5.push(producto4.nombre + " " + producto4.precio);
+  sumatotal += producto4.precio;
+  
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3000, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    style:{
+      background:"black"
+    }
+  }).showToast();
+  mandarALocalStorage5();
 }
 function cargarAlCarro6() {
-  carrito.push(producto6.nombre + " " + producto6.precio);
-  totalCarro += producto6.precio;
-  total += producto6.precio;
+  carrito6.push(producto5.nombre + " " + producto5.precio);
+  sumatotal += producto5.precio;
+
+  Toastify({
+    text: "Producto agregado al carrito",
+    class:"info",
+    duration: 3000, // Duración en milisegundos
+    gravity: "top", // Posición del toast (bottom, top, center)
+    style:{
+      background:"black"
+    }
+  }).showToast();
+  mandarALocalStorage6();
+}
+function cargarAlCarro7() {
+  carrito7.push(producto6.nombre + " " + producto6.precio);
+  sumatotal += producto6.precio;
   
  Toastify({
     text: "Producto agregado al carrito",
@@ -511,14 +296,11 @@ function cargarAlCarro6() {
       background:"black"
     }
   }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
+  mandarALocalStorage7();
 }
-
-function cargarAlCarro7() {
-  carrito.push(producto7.nombre + " " + producto7.precio);
-  totalCarro += producto7.precio;
-  total += producto7.precio;
+function cargarAlCarro8() {
+  carrito8.push(producto7.nombre + " " + producto7.precio);
+  sumatotal += producto7.precio;
   
   Toastify({
     text: "Producto agregado al carrito",
@@ -529,19 +311,17 @@ function cargarAlCarro7() {
       background:"black"
     }
   }).showToast();
-  console.log(carrito)
-  guardarCarritoEnLocalStorage()
+  mandarALocalStorage8();
 }
 
-boton0.addEventListener("click", cargarAlCarro0);
-boton1.addEventListener("click", cargarAlCarro1);
-boton2.addEventListener("click", cargarAlCarro2);
-boton3.addEventListener("click", cargarAlCarro3);
-boton4.addEventListener("click", cargarAlCarro4);
-boton5.addEventListener("click", cargarAlCarro5);
-boton6.addEventListener("click", cargarAlCarro6);
-boton7.addEventListener("click", cargarAlCarro7);
-cargarCarritoDesdeLocalStorage()
+boton0.addEventListener("click", cargarAlCarro);
+boton1.addEventListener("click", cargarAlCarro2);
+boton2.addEventListener("click", cargarAlCarro3);
+boton3.addEventListener("click", cargarAlCarro4);
+boton4.addEventListener("click", cargarAlCarro5);
+boton5.addEventListener("click", cargarAlCarro6);
+boton6.addEventListener("click", cargarAlCarro7);
+boton7.addEventListener("click", cargarAlCarro8);
 enlaseCarro.addEventListener('click', function(event) {
   event.preventDefault();
   if (localStorage.length == 0) {
@@ -550,6 +330,6 @@ enlaseCarro.addEventListener('click', function(event) {
     window.location.href="pages/carrito.html"
   }
 });
-
+actualizarTotal();
 
 
